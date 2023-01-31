@@ -5,7 +5,7 @@ import FeaturedPost from './FeaturedPost';
 import MainFeaturedPost from './MainFeaturedPost';
 import Loader from './Loader'
 // Posts
-import {getPosts} from '../functions/getPosts';
+import {getPosts} from '../functions/posts';
 
 function PostsPage() {
   const [posts, setPosts] = React.useState([]);

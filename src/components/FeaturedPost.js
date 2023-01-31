@@ -11,7 +11,7 @@ import months from '../functions/months';
 function FeaturedPost(props) {
 
   const { post } = props;
-  const url = '/' + post.id;
+  const url = '/' + post.url;
   const date = new Date(post.date);
 
   return (

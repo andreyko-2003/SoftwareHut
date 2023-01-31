@@ -1,8 +1,6 @@
 .postHead, .article {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 10px;
-  background-color: rgb(255, 110, 0, 0.1);
-  border-radius: 10px;
   display:flex;
   justify-content:space-between;
 }
@@ -17,15 +15,6 @@
   text-align: justify;
 }
 
-.article pre {
-  margin: 10px;
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
 .postImg {
   width: 60%;
   display: block;
@@ -35,6 +24,14 @@
 
 .postImg img {
   width: 100%;
-  border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 5px;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+}
+
+.content img {
+  width: 100%;
 }

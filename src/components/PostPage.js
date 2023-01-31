@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Loader from './Loader';
 import {useParams} from 'react-router-dom';
-import {getPostById} from '../functions/getPosts';
+import {getPost} from '../functions/posts';
 import months from '../functions/months';
 import '../styles/postPage.css'
 
@@ -16,7 +16,7 @@ function PostPage() {
     async function fetchPost() {
       setLoading(true);
       try {
-        const res = await getPostById(params.id);
+        const res = await getPost(params.url);
         setPost(res[0]);
         setImages(res[0].image);
       } catch (err) {
@@ -26,7 +26,7 @@ function PostPage() {
       }
     }
     fetchPost();
-  }, [params.id]);
+  }, [params.url]);
 
   return (
     <div className='post'>
@@ -36,7 +36,7 @@ function PostPage() {
           :
           <main>
             <div className='postHead'><h1>{post.title}</h1><span><i>{date.getFullYear()} {months[date.getMonth()]} {date.getDate()}</i></span></div>
-            <div className='article'><pre>{post.description}</pre></div>
+            <div className='article'><h3>{post.description}</h3></div>
             <div className='postImg'>
             {
               images.map(image => (
@@ -44,6 +44,7 @@ function PostPage() {
               ))
             }
             </div>
+            <div className='content' dangerouslySetInnerHTML={{__html: post.content}}></div>
           </main>
       }
     </div>

@@ -11,51 +11,47 @@ import Container from '@mui/material/Container';
 // MUI Icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+import { getSidebar } from '../functions/sidebar';
+
 
 function App() {
-  // Header navigation
-  const header_nav = [
-    { title: 'Technology', url: '#' },
-    { title: 'Design', url: '#' },
-    { title: 'Culture', url: '#' },
-    { title: 'Business', url: '#' },
-    { title: 'Politics', url: '#' },
-    { title: 'Opinion', url: '#' },
-    { title: 'Science', url: '#' },
-    { title: 'Health', url: '#' },
-    { title: 'Style', url: '#' },
-    { title: 'Travel', url: '#' },
-  ];
+  const [sidebar, setSidebar] = React.useState([]);
 
-  // Slidebar items
-  const sidebar = {
-    title: 'About',
-    description:
-      'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-    social: [
-      { name: 'GitHub', icon: GitHubIcon },
-      { name: 'Twitter', icon: TwitterIcon },
-      { name: 'Facebook', icon: FacebookIcon },
-    ],
-  };
+  React.useEffect(() => {
+    async function fetchPost() {
+      try {
+        const bar = await getSidebar();
+        setSidebar(bar[0]);
+      } catch (err) {
+        console.log(err);
+      } 
+    }
+    fetchPost();
+  }, []);
 
-  // Theme
+  const social = [
+    { name: 'GitHub', icon: GitHubIcon, link: sidebar.github },
+    { name: 'Facebook', icon: FacebookIcon, link: sidebar.facebook },
+    { name: 'Instagram', icon: InstagramIcon, link: sidebar.instagram },
+  ]
+
   const theme = createTheme();
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Blog" sections={header_nav} />
+        <Header title="Blog" />
         <Router />
         <Sidebar
           title={sidebar.title}
           description={sidebar.description}
-          social={sidebar.social}
+          social={social}
         />
       </Container>
-      <Footer title="Footer" description="Something here to give the footer a purpose!"/>
+      <Footer title="НПП Прмэкс" description=""/>
     </ThemeProvider>
   );
 }

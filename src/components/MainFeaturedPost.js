@@ -8,7 +8,7 @@ import {useNavigate} from 'react-router-dom'
 
 function MainFeaturedPost(props) {
   const { post } = props;
-  const url = '/' + post.id;
+  const url = '/' + post.url;
   const navigate = useNavigate();
 
   return (
@@ -62,6 +62,7 @@ function MainFeaturedPost(props) {
 MainFeaturedPost.propTypes = {
   post:
     PropTypes.shape({
+      url: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
