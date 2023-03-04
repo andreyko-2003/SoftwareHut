@@ -2,10 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
 ## License
 
 This project is licensed under the following licenses:
@@ -36,6 +32,10 @@ The BSD 3-Clause License is a permissive license that allows you to use, copy, m
 
 The ISC License is a permissive license that allows you to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to certain conditions.
 Of course, you can customize this section to suit your project's specific needs and include any other relevant details or information that you feel would be helpful for users. Additionally, be sure to include the appropriate license file(s) in your project's root directory, so that users can easily access and review the terms of each license.
+
+## Available Scripts
+
+In the project directory, you can run:
 
 ### `npm start`
 
