@@ -1,7 +1,16 @@
 {
   "name": "blog_software_hut",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "license": ["MIT", "Apache-2.0", "CC0-1.0", "BSD-3-Clause", "ISC"],
+  "author": {
+    "name": "Andrey Ishchenko",
+    "email": "andreyko.ishchenko@gmail.com"
+  },
+  "repository": {
+    "type": "git".
+    "url": "https://github.com/andreyko-2003/SoftwareHut.git"
+  },
+  "homepage": "",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",

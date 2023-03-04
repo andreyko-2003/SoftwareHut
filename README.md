@@ -6,6 +6,37 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## License
+
+This project is licensed under the following licenses:
+
+- MIT License
+- Apache License 2.0
+- Creative Commons Zero v1.0 Universal
+- BSD 3-Clause License
+- ISC License
+
+### MIT License
+
+The MIT License is a permissive license that allows you to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to certain conditions.
+
+### Apache License 2.0
+
+The Apache License 2.0 is a permissive license that allows you to use, copy, modify, distribute, and/or sell copies of the software, subject to certain conditions.
+
+### Creative Commons Zero v1.0 Universal
+
+The Creative Commons Zero v1.0 Universal license allows you to waive all rights to your work worldwide and dedicate it to the public domain.
+
+### BSD 3-Clause License
+
+The BSD 3-Clause License is a permissive license that allows you to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to certain conditions.
+
+### ISC License
+
+The ISC License is a permissive license that allows you to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to certain conditions.
+Of course, you can customize this section to suit your project's specific needs and include any other relevant details or information that you feel would be helpful for users. Additionally, be sure to include the appropriate license file(s) in your project's root directory, so that users can easily access and review the terms of each license.
+
 ### `npm start`
 
 Runs the app in the development mode.\
